@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.sql.rowset.spi.SyncResolver;
+
 class User {
 
     enum AccountType implements ApproveLoan, CalculateInterest 
@@ -24,6 +26,7 @@ class User {
                 case Current -> System.out.println("No Interest for Current Account");
             }
         }
+        
 
         @Override
         public void approveLoan(double balance) {
@@ -63,6 +66,7 @@ class User {
 
     public void approveLoan() {
         this.type.approveLoan(this.balance);
+        System.out.println("i am git hub");
     }
 
     public void calculateInterest(Scanner sc) {
